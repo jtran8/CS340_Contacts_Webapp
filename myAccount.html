@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Contact</title>
+  <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu">	
+        <ul>
+            <li><a href="contacts.html">Contacts</a></li>
+			<li><a href="myAccount.html">My Account</a></li>
+            <li><a href="home.html">Home</a></li>
+		</ul>
+    </div>
+    <br>
+    <h2>My Account</h2>
+    <br>
+    <h3>Welcome back, {{{name}}}.</h3>
+    <h3>Is all your info up-to-date?</h3>
+    <br>
+    <h4>Editing of a sample account (will populate from DB)</h4>
+    <form method="post">
+        <fieldset>
+            <legend>Update Account Info:</legend><br>
+                First Name: <input type="text" value="Jacyce" id="firstName" size="50" maxlength="50">
+                <br><br>
+                Last Name: <input type="text" value="Le" id="lastName" size="50" maxlength="50">
+                <br><br>
+                Phone: <input type="text" value="432 811 3541" id="phone" size="50" maxlength="50">
+                <br><br>
+                Email: <input type="text" value="jayle@email.com" id="email" size="50" maxlength="50">
+                <br><br>
+                <input type="submit" value="Update" class="btn" id="updateSubmit">
+                <br><br>
+        </fieldset>
+    </form>
+</body>
+
+</html>

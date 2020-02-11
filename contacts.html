@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Contacts</title>
+  <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu">	
+        <ul>
+            <li><a href="contacts.html">Contacts</a></li>
+			<li><a href="myAccount.html">My Account</a></li>
+            <li><a href="home.html">Home</a></li>
+		</ul>
+    </div>
+    <br>
+    <h2>Manage Contacts</h2>
+    <form method="post">
+        <fieldset>
+            <legend>Search Contacts:</legend><br>
+                <input type="text" placeholder="First Name" id="firstName" size="50" maxlength="50">
+                <br><br>
+                <input type="text" placeholder="Last Name" id="lastName" size="50" maxlength="50">
+                <br><br>
+                <input type="submit" value="Search" class="btn" id="searchSubmit">
+                <br><br>
+        </fieldset>
+    </form><br>
+    <h4>Display Results (sample, will populate from DB)</h4>
+    <table>
+        <caption>Example results for Alex first name search.</caption>   
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Notes</th>
+                <th>Interactions</th>
+                <th>Update</th>
+                <th>Remove</th>
+            </tr>
+        </thead> 
+        <tbody>
+            <tr>
+                <td>Alex</td>
+                <td>Rich</td>
+                <td>555 567 1111</td>
+                <td>arich@email.com</td>
+                <td>Owes me 15 bucks.</td>
+                <td><button class="tableButton">Logs</button></td>
+                <td><button class="tableButton">Edit</button></td>
+                <td><button class="tableButton">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Alexander</td>
+                <td>Phillip</td>
+                <td>435 321 1438</td>
+                <td>supercool@email.com</td>
+                <td>Two first names.</td>
+                <td><button class="tableButton">Logs</button></td>
+                <td><button class="tableButton">Edit</button></td>
+                <td><button class="tableButton">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Alexis</td>
+                <td>Phillip</td>
+                <td>435 321 1438</td>
+                <td>supercool@email.com</td>
+                <td>Two first names.</td>
+                <td><button class="tableButton">Logs</button></td>
+                <td><button class="tableButton">Edit</button></td>
+                <td><button class="tableButton">Delete</button></td>
+            </tr>
+        </tbody>
+    </table><br>
+    <h3>Add a New Contact</h3>
+    <form method="post">
+        <fieldset>
+            <legend>Enter Contact Info:</legend><br>
+                <input type="text" placeholder="First Name" id="firstName" size="50" maxlength="50">
+                <br><br>
+                <input type="text" placeholder="Last Name" id="lastName" size="50" maxlength="50">
+                <br><br>
+                <input type="text" placeholder="Phone" id="phone" size="50" maxlength="50">
+                <br><br>
+                <input type="text" placeholder="Email" id="email" size="50" maxlength="50">
+                <br><br>
+                <textarea cols="51" rows="10" placeholder="Notes" id="notes"></textarea>
+                <br><br>
+                <input type="submit" value="Add" class="btn" id="contactSubmit">
+                <br><br>
+        </fieldset>
+    </form>
+</body>
+
+</html>

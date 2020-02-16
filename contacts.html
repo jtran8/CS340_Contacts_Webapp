@@ -40,6 +40,7 @@
                 <th>Phone</th>
                 <th>Email</th>
                 <th>Notes</th>
+                <th>Emergency Contact</th>
                 <th>Interactions</th>
                 <th>Update</th>
                 <th>Remove</th>
@@ -52,6 +53,7 @@
                 <td>555 567 1111</td>
                 <td>arich@email.com</td>
                 <td>Owes me 15 bucks.</td>
+                <td></td>
                 <td><button class="tableButton">Logs</button></td>
                 <td><button class="tableButton">Edit</button></td>
                 <td><button class="tableButton">Delete</button></td>
@@ -62,6 +64,7 @@
                 <td>435 321 1438</td>
                 <td>supercool@email.com</td>
                 <td>Two first names.</td>
+                <td>Morgan Lee</td>
                 <td><button class="tableButton">Logs</button></td>
                 <td><button class="tableButton">Edit</button></td>
                 <td><button class="tableButton">Delete</button></td>
@@ -72,6 +75,7 @@
                 <td>435 321 1438</td>
                 <td>supercool@email.com</td>
                 <td>Two first names.</td>
+                <td>Jordan Jones</td>
                 <td><button class="tableButton">Logs</button></td>
                 <td><button class="tableButton">Edit</button></td>
                 <td><button class="tableButton">Delete</button></td>
@@ -91,6 +95,16 @@
                 <input type="text" placeholder="Email" id="email" size="50" maxlength="50">
                 <br><br>
                 <textarea cols="51" rows="10" placeholder="Notes" id="notes"></textarea>
+                <br><br>
+                Emergency Contact:&nbsp;
+                <select name="emergencyContactId">
+                    <option value="0">- None -</option>
+                    <option value="1">Alex Rich</option>
+                    <option value="2">Alexander Phillip</option>
+                    <option value="3">Alexis Phillip</option>
+                    <option value="4">Jordan Jones</option>
+                    <option value="5">Morgan Lee</option>
+                </select>
                 <br><br>
                 <input type="submit" value="Add" class="btn" id="contactSubmit">
                 <br><br>

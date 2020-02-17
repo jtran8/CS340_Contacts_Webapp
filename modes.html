@@ -11,6 +11,7 @@
 <body>
     <div class="menu">	
         <ul>
+            <li><a href="modes.html">Modes</a></li>
             <li><a href="contacts.html">Contacts</a></li>
 			<li><a href="myAccount.html">My Account</a></li>
             <li><a href="home.html">Home</a></li>
@@ -19,92 +20,30 @@
     </div>
     <br>
     <h2>Manage Modes</h2>
-    <form method="post">
-        <fieldset>
-            <legend>Search Contacts:</legend><br>
-                <input type="text" placeholder="First Name" id="firstName" size="50" maxlength="50">
-                <br><br>
-                <input type="text" placeholder="Last Name" id="lastName" size="50" maxlength="50">
-                <br><br>
-                <input type="submit" value="Search" class="btn" id="searchSubmit">
-                <br><br>
-        </fieldset>
-    </form><br>
-    <h4>Display Results (sample, will populate from DB)</h4>
+    <h4>Modes (sample, will populate from DB)</h4>
     <table>
-        <caption>Example results for Alex first name search.</caption>   
         <thead>
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Notes</th>
-                <th>Emergency Contact</th>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th>Type of Communication</th>
             </tr>
         </thead> 
         <tbody>
             <tr>
-                <td>Alex</td>
-                <td>Rich</td>
-                <td>555 567 1111</td>
-                <td>arich@email.com</td>
-                <td>Owes me 15 bucks.</td>
-                <td></td>
-                <td><button class="tableButton">View Interactions</button></td>
-                <td><button class="tableButton">Edit Contact</button></td>
-                <td><button class="tableButton">Delete Contact</button></td>
+                <td>Text Message</td>
             </tr>
             <tr>
-                <td>Alexander</td>
-                <td>Phillip</td>
-                <td>435 321 1438</td>
-                <td>supercool@email.com</td>
-                <td>Two first names.</td>
-                <td>Morgan Lee</td>
-                <td><button class="tableButton">View Interactions</button></td>
-                <td><button class="tableButton">Edit Contact</button></td>
-                <td><button class="tableButton">Delete Contact</button></td>
+                <td>Voice Call</td>
             </tr>
             <tr>
-                <td>Alexis</td>
-                <td>Phillip</td>
-                <td>435 321 1438</td>
-                <td>supercool@email.com</td>
-                <td>Two first names.</td>
-                <td>Jordan Jones</td>
-                <td><button class="tableButton">View Interactions</button></td>
-                <td><button class="tableButton">Edit Contact</button></td>
-                <td><button class="tableButton">Delete Contact</button></td>
+                <td>Meeting</td>
             </tr>
         </tbody>
     </table><br>
-    <h3>Add a New Contact</h3>
+    <h3>Add a New Mode</h3>
     <form method="post">
         <fieldset>
-            <legend>Enter Contact Info:</legend><br>
-                <input type="text" placeholder="First Name" id="firstName" size="50" maxlength="50">
-                <br><br>
-                <input type="text" placeholder="Last Name" id="lastName" size="50" maxlength="50">
-                <br><br>
-                <input type="text" placeholder="Phone" id="phone" size="50" maxlength="50">
-                <br><br>
-                <input type="text" placeholder="Email" id="email" size="50" maxlength="50">
-                <br><br>
-                <textarea cols="51" rows="10" placeholder="Notes" id="notes"></textarea>
-                <br><br>
-                Emergency Contact:&nbsp;
-                <select name="emergencyContactId">
-                    <option value="0">- None -</option>
-                    <option value="1">Alex Rich</option>
-                    <option value="2">Alexander Phillip</option>
-                    <option value="3">Alexis Phillip</option>
-                    <option value="4">Jordan Jones</option>
-                    <option value="5">Morgan Lee</option>
-                </select>
+            <legend>Enter Mode Info:</legend><br>
+                <input type="text" placeholder="Type of Communication" id="firstName" size="50" maxlength="50">
                 <br><br>
                 <input type="submit" value="Add" class="btn" id="contactSubmit">
                 <br><br>

@@ -3,11 +3,11 @@
 
 -- Queries needed by /home.html:
 
--- -- To generate list of users (and user IDs):
+-- -- Query to generate list of users (and user IDs):
 
 SELECT userId, lastName, firstName FROM users;
 
--- -- To create a new account:
+-- -- Query to create a new account:
 
 INSERT INTO users (lastName, firstName, phone, email) VALUES
 ('ProvidedLastName', 'ProvidedFirstName', 'ProvidedPhoneNumber', 'ProvidedEmailAddress');

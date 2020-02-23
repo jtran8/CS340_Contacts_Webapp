@@ -48,9 +48,9 @@ CREATE TABLE `communicationModes` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `interactionDetails` (
-  `interactionId` int(11) NOT NULL,
+  `interactId` int(11) NOT NULL,
   `comId` int(11) NOT NULL,
   `details` varchar(255) NOT NULL,
-  CONSTRAINT `interactionDetails_fk_interaction` FOREIGN KEY (`interactionId`) REFERENCES `interactions` (`interactId`),
+  CONSTRAINT `interactionDetails_fk_interaction` FOREIGN KEY (`interactId`) REFERENCES `interactions` (`interactId`),
   CONSTRAINT `interactionDetails_fk_comType` FOREIGN KEY (`comId`) REFERENCES `communicationModes` (`comId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;

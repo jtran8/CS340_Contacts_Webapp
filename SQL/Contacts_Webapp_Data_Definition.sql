@@ -1,4 +1,13 @@
+-- We have to drop tables in the reverse of their creation order.
+
+DROP TABLE IF EXISTS `interactionDetails`;
+DROP TABLE IF EXISTS `communicationModes`;
+DROP TABLE IF EXISTS `interactions`;
+DROP TABLE IF EXISTS `contacts`;
 DROP TABLE IF EXISTS `users`;
+
+-- Now it's time to create the tables.
+
 CREATE TABLE `users` (
   `userId` int(11) NOT NULL AUTO_INCREMENT,
   `lastName` varchar(50) NOT NULL,
@@ -8,7 +17,6 @@ CREATE TABLE `users` (
   PRIMARY KEY (`userId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `contacts`;
 CREATE TABLE `contacts` (
   `contactId` int(11) NOT NULL AUTO_INCREMENT,
   `userId` int(11) NOT NULL,
@@ -25,7 +33,6 @@ CREATE TABLE `contacts` (
     ON UPDATE SET NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `interactions`;
 CREATE TABLE `interactions` (
   `interactId` int(11) NOT NULL AUTO_INCREMENT,
   `contactId` int(11) NOT NULL,
@@ -34,14 +41,12 @@ CREATE TABLE `interactions` (
   CONSTRAINT `interactions_fk_contact` FOREIGN KEY (`contactId`) REFERENCES `contacts` (`contactId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `communicationModes`;
 CREATE TABLE `communicationModes` (
   `comId` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(50) NOT NULL,
   PRIMARY KEY (`comId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
-DROP TABLE IF EXISTS `interactionDetails`;
 CREATE TABLE `interactionDetails` (
   `interactionId` int(11) NOT NULL,
   `comId` int(11) NOT NULL,

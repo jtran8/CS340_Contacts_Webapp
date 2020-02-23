@@ -16,10 +16,10 @@ CREATE TABLE `contacts` (
   `firstName` varchar(50) NOT NULL,
   `phone` varchar(50) NOT NULL,
   `email` varchar(254) NOT NULL,
-  `emContactId` int (11),
+  `emergencyContactId` int (11),
   PRIMARY KEY (`contactId`),
   CONSTRAINT `contacts_fk_user` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`),
-  CONSTRAINT `contacts_fk_em` FOREIGN KEY (`emContactId`) REFERENCES `contacts` (`contactId`)
+  CONSTRAINT `contacts_fk_emergency_contact` FOREIGN KEY (`emergencyContactId`) REFERENCES `contacts` (`contactId`)
     ON DELETE SET NULL
     ON UPDATE SET NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;

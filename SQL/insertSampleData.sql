@@ -11,3 +11,9 @@ INSERT INTO contacts (userId, lastName, firstName, phone, email, notes, emergenc
 (5, 'Jung', 'Jordan', '617-555-1004', 'jordan@example.com', 'Birthday is Jan. 1.', NULL),
 (5, 'Smith', 'Sydney', '617-555-1005', 'sydney@example.com', 'Has a dog.', 5),
 (5, 'Rogers', 'Robin', '617-555-1006', 'robin@example.com', 'Software engineer.', NULL);
+
+INSERT INTO interactions (contactId, `start`) VALUES
+(5, "2000-01-01 09:00:00"),
+(5, "2000-01-02 10:00:00"),
+(5, "2000-01-03 11:00:00"),
+(5, "2000-01-13 12:00:00");

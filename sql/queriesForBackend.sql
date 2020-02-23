@@ -10,9 +10,13 @@ SELECT userId, lastName, firstName FROM users;
 -- -- Query to create a new account:
 
 INSERT INTO users (lastName, firstName, phone, email) VALUES
-('ProvidedLastName', 'ProvidedFirstName', 'ProvidedPhoneNumber', 'ProvidedEmailAddress');
+('LastNameFromUserInput', 'FirstNameFromUserInput', 'PhoneNumberFromUserInput', 'EmailAddressFromUserInput');
 
 -- Queries needed by /myAccount.html:
+
+-- -- Query to get user's name:
+
+SELECT lastName, firstName FROM users WHERE userID='UserIdFromURL';
 
 -- Queries needed by /contacts.html:
 

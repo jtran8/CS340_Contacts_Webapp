@@ -1,7 +1,7 @@
 -- Throughout this file, single quotes are used to set off variables that will
 -- be provided by the backend programming language.
 
-
+--------------------------------------------------------------------------------
 
 -- Queries needed by /home.html:
 
@@ -14,7 +14,7 @@ SELECT userId, lastName, firstName FROM users;
 INSERT INTO users (lastName, firstName, phone, email) VALUES
 ('LastNameFromUserInput', 'FirstNameFromUserInput', 'PhoneNumberFromUserInput', 'EmailAddressFromUserInput');
 
-
+--------------------------------------------------------------------------------
 
 -- Queries needed by /myAccount.html:
 
@@ -32,22 +32,22 @@ UPDATE users
 SET lastName='LastNameFromUserInput', firstName='FirstNameFromUserInput', phone='PhoneFromUserInput', email='EmailFromUserInput'
 WHERE userId='UserIdFromURL';
 
-
+--------------------------------------------------------------------------------
 
 -- Queries needed by /contacts.html:
 
-
+--------------------------------------------------------------------------------
 
 -- Queries needed by /editContact.html:
 
-
+--------------------------------------------------------------------------------
 
 -- Queries needed by /viewInteractions.html:
 
-
+--------------------------------------------------------------------------------
 
 -- Queries needed by /addModeToInteraction.html:
 
-
+--------------------------------------------------------------------------------
 
 -- Queries neeed by /modes.html:

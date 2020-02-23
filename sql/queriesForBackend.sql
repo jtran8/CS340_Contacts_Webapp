@@ -3,6 +3,14 @@
 
 -- Queries needed by /home.html:
 
+-- -- To generate list of users (and user IDs):
+
+SELECT userId, lastName, firstName FROM users;
+
+-- -- To create a new account:
+
+
+
 -- Queries needed by /myAccount.html:
 
 -- Queries needed by /contacts.html:

@@ -13,7 +13,12 @@ INSERT INTO contacts (userId, lastName, firstName, phone, email, notes, emergenc
 (5, 'Rogers', 'Robin', '617-555-1006', 'robin@example.com', 'Software engineer.', NULL);
 
 INSERT INTO interactions (contactId, `start`) VALUES
-(5, "2000-01-01 09:00:00"),
-(5, "2000-01-02 10:00:00"),
-(5, "2000-01-03 11:00:00"),
-(5, "2000-01-13 12:00:00");
+(5, '2000-01-01 09:00:00'),
+(5, '2000-01-02 10:00:00'),
+(5, '2000-01-03 11:00:00'),
+(5, '2000-01-13 12:00:00');
+
+INSERT INTO communicationModes (`type`) VALUES
+('SMS Message'),
+('Voice Call'),
+('Meeting');

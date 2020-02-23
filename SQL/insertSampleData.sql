@@ -24,7 +24,7 @@ INSERT INTO communicationModes (`type`) VALUES
 ('Meeting');
 
 INSERT INTO interactionDetails (interactId, comId, details) VALUES
-(5, 5, 'Made plans to meet up over cover or lunch.'),
+(5, 5, 'Made plans to meet up over coffee or lunch.'),
 (6, 6, 'Chose a spot and time for lunch.'),
 (7, 7, 'Met up for lunch at Queen Margherita Pizza; he forgot his wallet so I covered.'),
 (8, 5, 'Reminded him he owes me for lunch.'),

@@ -15,7 +15,7 @@ CREATE TABLE `users` (
   `phone` varchar(50) NOT NULL,
   `email` varchar(254) NOT NULL,
   PRIMARY KEY (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `contacts` (
   `contactId` int(11) NOT NULL AUTO_INCREMENT,
@@ -31,7 +31,7 @@ CREATE TABLE `contacts` (
   CONSTRAINT `contacts_fk_emergency_contact` FOREIGN KEY (`emergencyContactId`) REFERENCES `contacts` (`contactId`)
     ON DELETE SET NULL
     ON UPDATE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `interactions` (
   `interactId` int(11) NOT NULL AUTO_INCREMENT,
@@ -39,13 +39,13 @@ CREATE TABLE `interactions` (
   `start` datetime NOT NULL,
   PRIMARY KEY (`interactId`),
   CONSTRAINT `interactions_fk_contact` FOREIGN KEY (`contactId`) REFERENCES `contacts` (`contactId`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `communicationModes` (
   `comId` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(50) NOT NULL,
   PRIMARY KEY (`comId`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `interactionDetails` (
   `interactId` int(11) NOT NULL,
@@ -53,4 +53,4 @@ CREATE TABLE `interactionDetails` (
   `details` varchar(255) NOT NULL,
   CONSTRAINT `interactionDetails_fk_interaction` FOREIGN KEY (`interactId`) REFERENCES `interactions` (`interactId`),
   CONSTRAINT `interactionDetails_fk_comType` FOREIGN KEY (`comId`) REFERENCES `communicationModes` (`comId`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

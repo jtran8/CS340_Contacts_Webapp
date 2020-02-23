@@ -22,3 +22,10 @@ INSERT INTO communicationModes (`type`) VALUES
 ('SMS Message'),
 ('Voice Call'),
 ('Meeting');
+
+INSERT INTO interactionDetails (interactId, comId, details) VALUES
+(5, 5, 'Made plans to meet up over cover or lunch.'),
+(6, 6, 'Chose a spot and time for lunch.'),
+(7, 7, 'Met up for lunch at Queen Margherita Pizza; he forgot his wallet so I covered.'),
+(8, 5, 'Reminded him he owes me for lunch.'),
+(8, 6, 'He called me apologize for taking so long to repay him.');

@@ -1,4 +1,4 @@
--- Throughout this file, double quotes are used to set off variables that will
+-- Throughout this file, single quotes are used to set off variables that will
 -- be provided by the backend programming language.
 
 -- Queries needed by /home.html:
@@ -9,7 +9,8 @@ SELECT userId, lastName, firstName FROM users;
 
 -- -- To create a new account:
 
-
+INSERT INTO users (lastName, firstName, phone, email) VALUES
+('ProvidedLastName', 'ProvidedFirstName', 'ProvidedPhoneNumber', 'ProvidedEmailAddress');
 
 -- Queries needed by /myAccount.html:
 

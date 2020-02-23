@@ -16,6 +16,7 @@ CREATE TABLE `contacts` (
   `firstName` varchar(50) NOT NULL,
   `phone` varchar(50) NOT NULL,
   `email` varchar(254) NOT NULL,
+  `notes` varchar(255) NOT NULL,
   `emergencyContactId` int (11),
   PRIMARY KEY (`contactId`),
   CONSTRAINT `contacts_fk_user` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`),

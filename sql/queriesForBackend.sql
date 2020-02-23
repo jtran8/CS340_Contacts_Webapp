@@ -36,6 +36,21 @@ WHERE userId='UserIdFromURL';
 
 -- Queries needed by /contacts.html:
 
+-- -- Query to get user's name:
+
+-- -- -- See above.
+
+-- -- Query to run when a user searches for a last name and/or a first name and/or no name:
+
+SELECT C.contactId, C.lastName, C.firstName, C.phone, C.email, C.notes, EC.lastName, EC.firstName
+FROM contacts AS C
+LEFT JOIN contacts AS EC ON EC.contactId=C.emergencyContactId
+WHERE C.lastName LIKE 'LastNameSearchParameter' AND C.firstName LIKE 'FirstNameSearchParameter';
+
+-- -- -- Note: Any search parameter that is not provided by the user will be set equal to a % character.
+-- -- -- As a result, we'll be able to use this one query whether the user searches for a last name,
+-- -- -- a first name, or no name.
+
 --------------------------------------------------------------------------------
 
 -- Queries needed by /editContact.html:

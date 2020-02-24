@@ -7,7 +7,8 @@
 
 -- -- Query to generate list of users (and user IDs):
 
-SELECT userId, lastName, firstName FROM users;
+SELECT userId, lastName, firstName
+FROM users;
 
 -- -- Query to create a new account:
 
@@ -20,17 +21,21 @@ INSERT INTO users (lastName, firstName, phone, email) VALUES
 
 -- -- Query to get user's name:
 
-SELECT lastName, firstName FROM users WHERE userID='UserIdFromURL';
+SELECT lastName, firstName
+FROM users
+WHERE userID='CurrentUserIdFromURL';
 
 -- -- Query to get current information for current user:
 
-SELECT lastName, firstName, phone, email FROM users WHERE userID='UserIdFromURL';
+SELECT lastName, firstName, phone, email
+FROM users
+WHERE userID='CurrentUserIdFromURL';
 
 -- -- Query to update information for current user:
 
 UPDATE users
 SET lastName='LastNameFromUserInput', firstName='FirstNameFromUserInput', phone='PhoneFromUserInput', email='EmailFromUserInput'
-WHERE userId='UserIdFromURL';
+WHERE userId='CurrentUserIdFromURL';
 
 --------------------------------------------------------------------------------
 
@@ -42,14 +47,22 @@ WHERE userId='UserIdFromURL';
 
 -- -- Query to run when a user searches for a last name and/or a first name and/or no name:
 
-SELECT C.contactId, C.lastName, C.firstName, C.phone, C.email, C.notes, EC.lastName, EC.firstName
+SELECT C.contactId, C.lastName, C.firstName, C.phone, C.email, C.notes, EC.lastName AS `EC.lastName`, EC.firstName as `EC.firstName`
 FROM contacts AS C
 LEFT JOIN contacts AS EC ON EC.contactId=C.emergencyContactId
-WHERE C.lastName LIKE 'LastNameSearchParameter' AND C.firstName LIKE 'FirstNameSearchParameter';
+WHERE C.lastName LIKE 'LastNameSearchParameter'
+AND C.firstName LIKE 'FirstNameSearchParameter'
+AND C.userId='CurrentUserIdFromUrl';
 
 -- -- -- Note: Any search parameter that is not provided by the user will be set equal to a % character.
 -- -- -- As a result, we'll be able to use this one query whether the user searches for a last name,
 -- -- -- a first name, or no name.
+
+-- -- Query to populate the "Emergency Contact" selection element:
+
+SELECT contactId, lastName, firstName
+FROM contacts
+WHERE userId='CurrentUserIdFromUrl';
 
 --------------------------------------------------------------------------------
 

@@ -19,7 +19,7 @@ INSERT INTO users (lastName, firstName, phone, email) VALUES
 
 -- Queries needed by /myAccount.html:
 
--- -- Query to get user's name:
+-- -- Query to get current user's name:
 
 SELECT lastName, firstName
 FROM users
@@ -41,7 +41,7 @@ WHERE userId='CurrentUserIdFromURL';
 
 -- Queries needed by /contacts.html:
 
--- -- Query to get user's name:
+-- -- Query to get current user's name:
 
 -- -- -- See above.
 

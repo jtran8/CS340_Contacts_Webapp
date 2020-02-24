@@ -60,6 +60,12 @@ ORDER BY C.lastName ASC, C.firstName ASC;
 -- -- -- As a result, we'll be able to use this one query whether the user searches for a last name,
 -- -- -- a first name, or no name.
 
+-- -- Query to delete a contact:
+
+DELETE FROM contacts
+WHERE contactId='ContactIdFromUserInput'
+AND userId='CurrentUserIdFromUrl';
+
 -- -- Query to populate the "Emergency Contact" selection element:
 
 SELECT contactId, lastName, firstName

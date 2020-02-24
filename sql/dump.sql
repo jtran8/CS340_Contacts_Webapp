@@ -69,7 +69,7 @@ CREATE TABLE `contacts` (
 
 LOCK TABLES `contacts` WRITE;
 /*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
-INSERT INTO `contacts` VALUES (1,1,'Jung','Jordan','617-555-1004','jordan@example.com','Owes me $15.',NULL),(2,1,'Smith','Sydney','617-555-1005','sydney@example.com','Has a dog.',1),(3,1,'Rogers','Robin','617-555-1006','robin@example.com','Software engineer.',NULL),(4,2,'Moore','Murphy','617-555-1007','murphy@example.com','Birthday is Jan. 1.',NULL),(5,2,'Hall','Hollis','617-555-1008','hollis@example.com','',2),(6,2,'Brown','Brighton','617-555-1009','brighton@example.com','',NULL);
+INSERT INTO `contacts` VALUES (1,1,'Jung','Jordan','617-555-1004','jordan@example.com','Owes me $15.',NULL),(2,1,'Smith','Sydney','617-555-1005','sydney@example.com','Has a dog.',1),(3,1,'Rogers','Robin','617-555-1006','robin@example.com','Software engineer.',NULL),(4,2,'Moore','Murphy','617-555-1007','murphy@example.com','Birthday is Jan. 1.',NULL),(5,2,'Hall','Hollis','617-555-1008','hollis@example.com','',4),(6,2,'Brown','Brighton','617-555-1009','brighton@example.com','',NULL);
 /*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -164,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-24  7:32:01
+-- Dump completed on 2020-02-24  7:42:49

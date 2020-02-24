@@ -64,6 +64,25 @@ SELECT contactId, lastName, firstName
 FROM contacts
 WHERE userId='CurrentUserIdFromUrl';
 
+-- -- Query to add a new contact:
+
+INSERT INTO contacts (userId, lastName, firstName, phone, email, notes, emergencyContactId) VALUES
+('CurrentUserIdFromUrl',
+'LastNameFromUserInput',
+'FirstNameFromUserInput',
+'PhoneFromUserInput',
+'EmailFromUserInput',
+'NotesFromUserInput',
+'EmergencyContactIdFromUserInput');
+
+-- -- -- Note: We don't have a way to ensure that the end user doesn't hack the form by submitting some other user's
+-- -- -- userId.
+-- -- -- 
+-- -- -- We also don't have a way to ensure that the end user doesn't hack the form by submitting an invalid
+-- -- -- emergency contact ID.
+-- -- -- 
+-- -- -- For this class's purposes, I'm sure that this okay. I'm just sayin'.
+
 --------------------------------------------------------------------------------
 
 -- Queries needed by /editContact.html:

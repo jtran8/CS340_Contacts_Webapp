@@ -23,13 +23,13 @@ INSERT INTO users (lastName, firstName, phone, email) VALUES
 
 SELECT lastName, firstName
 FROM users
-WHERE userID='CurrentUserIdFromURL';
+WHERE userId='CurrentUserIdFromURL';
 
 -- -- Query to get current information for current user:
 
 SELECT lastName, firstName, phone, email
 FROM users
-WHERE userID='CurrentUserIdFromURL';
+WHERE userId='CurrentUserIdFromURL';
 
 -- -- Query to update information for current user:
 

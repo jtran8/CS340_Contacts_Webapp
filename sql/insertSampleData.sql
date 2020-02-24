@@ -8,9 +8,12 @@ INSERT INTO users (lastName, firstName, phone, email) VALUES
 ('Adams', 'Armani', '555-555-1003', 'armani@example.com');
 
 INSERT INTO contacts (userId, lastName, firstName, phone, email, notes, emergencyContactId) VALUES
-(1, 'Jung', 'Jordan', '617-555-1004', 'jordan@example.com', 'Birthday is Jan. 1.', NULL),
+(1, 'Jung', 'Jordan', '617-555-1004', 'jordan@example.com', 'Owes me $15.', NULL),
 (1, 'Smith', 'Sydney', '617-555-1005', 'sydney@example.com', 'Has a dog.', 1),
-(1, 'Rogers', 'Robin', '617-555-1006', 'robin@example.com', 'Software engineer.', NULL);
+(1, 'Rogers', 'Robin', '617-555-1006', 'robin@example.com', 'Software engineer.', NULL),
+(2, 'Moore', 'Murphy', '617-555-1007', 'murphy@example.com', 'Birthday is Jan. 1.', NULL),
+(2, 'Hall', 'Hollis', '617-555-1008', 'hollis@example.com', '', 2),
+(2, 'Brown', 'Brighton', '617-555-1009', 'brighton@example.com', '', NULL);
 
 INSERT INTO interactions (contactId, `start`) VALUES
 (1, '2000-01-01 09:00:00'),

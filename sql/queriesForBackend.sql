@@ -8,7 +8,8 @@
 -- -- Query to generate list of users (and user IDs):
 
 SELECT userId, lastName, firstName
-FROM users;
+FROM users
+ORDER BY lastName ASC, firstName ASC;
 
 -- -- Query to create a new account:
 
@@ -52,7 +53,8 @@ FROM contacts AS C
 LEFT JOIN contacts AS EC ON EC.contactId=C.emergencyContactId
 WHERE C.lastName LIKE 'LastNameSearchParameter'
 AND C.firstName LIKE 'FirstNameSearchParameter'
-AND C.userId='CurrentUserIdFromUrl';
+AND C.userId='CurrentUserIdFromUrl'
+ORDER BY C.lastName ASC, C.firstName ASC;
 
 -- -- -- Note: Any search parameter that is not provided by the user will be set equal to a % character.
 -- -- -- As a result, we'll be able to use this one query whether the user searches for a last name,
@@ -62,7 +64,8 @@ AND C.userId='CurrentUserIdFromUrl';
 
 SELECT contactId, lastName, firstName
 FROM contacts
-WHERE userId='CurrentUserIdFromUrl';
+WHERE userId='CurrentUserIdFromUrl'
+ORDER BY lastName ASC, firstName ASC;
 
 -- -- Query to add a new contact:
 

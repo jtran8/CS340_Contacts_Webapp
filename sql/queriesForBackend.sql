@@ -91,6 +91,14 @@ INSERT INTO contacts (userId, lastName, firstName, phone, email, notes, emergenc
 
 -- -- -- See above.
 
+-- -- Query to populate "Emergency Contact" selection element:
+
+SELECT contactId, lastName, firstName
+FROM contacts
+WHERE userId='CurrentUserIdFromUrl'
+AND contactId<>'SelectedContactIdFromUrl'
+ORDER BY lastName ASC, firstName ASC;
+
 -- -- Query to get selected contact's current information:
 
 SELECT C.contactId,
@@ -106,6 +114,18 @@ FROM contacts AS C
 LEFT JOIN contacts AS EC ON EC.contactId=C.emergencyContactId
 WHERE C.contactId='SelectedContactIdFromUrl'
 AND C.userId='CurrentUserIdFromUrl';
+
+-- -- Query to update selected contact's current information
+
+UPDATE contacts
+SET lastName='LastNameFromUserInput',
+firstName='FirstNameFromUserInput',
+phone='PhoneFromUserInput',
+email='EmailFromUserInput',
+notes='NotesFromUserInput',
+emergencyContactId='EmergencyContactIdFromUserInput'
+WHERE contactId='SelectedContactIdFromUrl'
+AND userId='CurrentUserIdFromURL';
 
 --------------------------------------------------------------------------------
 

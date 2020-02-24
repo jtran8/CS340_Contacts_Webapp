@@ -12,7 +12,7 @@ INSERT INTO contacts (userId, lastName, firstName, phone, email, notes, emergenc
 (1, 'Smith', 'Sydney', '617-555-1005', 'sydney@example.com', 'Has a dog.', 1),
 (1, 'Rogers', 'Robin', '617-555-1006', 'robin@example.com', 'Software engineer.', NULL),
 (2, 'Moore', 'Murphy', '617-555-1007', 'murphy@example.com', 'Birthday is Jan. 1.', NULL),
-(2, 'Hall', 'Hollis', '617-555-1008', 'hollis@example.com', '', 2),
+(2, 'Hall', 'Hollis', '617-555-1008', 'hollis@example.com', '', 4),
 (2, 'Brown', 'Brighton', '617-555-1009', 'brighton@example.com', '', NULL);
 
 INSERT INTO interactions (contactId, `start`) VALUES

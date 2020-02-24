@@ -87,6 +87,26 @@ INSERT INTO contacts (userId, lastName, firstName, phone, email, notes, emergenc
 
 -- Queries needed by /editContact.html:
 
+-- -- Query to get current user's name:
+
+-- -- -- See above.
+
+-- -- Query to get selected contact's current information:
+
+SELECT C.contactId,
+C.lastName,
+C.firstName,
+C.phone,
+C.email,
+C.notes,
+EC.contactId AS `EC.contactId`,
+EC.lastName AS `EC.lastName`, 
+EC.firstName as `EC.firstName`
+FROM contacts AS C
+LEFT JOIN contacts AS EC ON EC.contactId=C.emergencyContactId
+WHERE C.contactId='SelectedContactIdFromUrl'
+AND C.userId='CurrentUserIdFromUrl';
+
 --------------------------------------------------------------------------------
 
 -- Queries needed by /viewInteractions.html:

@@ -21,73 +21,112 @@
     <br>
     <h2>View your Interaction History with {{{contact name}}}</h2>
     <h4>Display Results (sample, will populate from DB)</h4>
-    <table>
-        <caption>Sample Results after clicking on View Interactions button in View Contacts page.</caption>   
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Time</th>
-                <th></th>
-                <th>Mode</th>
-                <th>Details</th>
-                <th></th>
-            </tr>
-        </thead> 
-        <tbody>
-            <tr>
-                <td>12/02/2019</td>
-                <td>1:26 PM (EST)</td>
-                <td><button onclick="location.href='addModeToInteraction.html'" class="tableButton">Add a Mode to This Interaction</button></td>
-                <td>Text Message</td>
-                <td>Made plans to meet up over coffee or lunch.</td>
-                <td><button class="tableButton">Delete This Mode</button></td>
-            </tr>
-            <tr>
-                <td>12/04/2019</td>
-                <td>5:34 PM (EST)</td>
-                <td><button onclick="location.href='addModeToInteraction.html'" class="tableButton">Add a Mode to This Interaction</button></td>
-                <td>Voice Call</td>
-                <td>Choose a spot and time for lunch.</td>
-                <td><button class="tableButton">Delete This Mode</button></td>
-            </tr>
-            <tr>
-                <td>12/08/2019</td>
-                <td>12:02 PM (EST)</td>
-                <td><button onclick="location.href='addModeToInteraction.html'" class="tableButton">Add a Mode to This Interaction</button></td>
-                <td>Meeting</td>
-                <td>Met up for lunch at Queen Margherita Pizza, forgot his wallet so I covered.</td>
-                <td><button class="tableButton">Delete This Mode</button></td>
-            </tr>
-            <tr>
-                <td>12/18/2019</td>
-                <td>7:57 PM (EST)</td>
-                <td><button onclick="location.href='addModeToInteraction.html'" class="tableButton">Add a Mode to This Interaction</button></td>
-                <td>Text Message</td>
-                <td>Reminded him he owes me for lunch.</td>
-                <td><button class="tableButton">Delete This Mode</button></td>
-            </tr>
-            <tr>
-                <td>12/18/2019</td>
-                <td>7:57 PM (EST)</td>
-                <td><button onclick="location.href='addModeToInteraction.html'" class="tableButton">Add a Mode to This Interaction</button></td>
-                <td>Voice Call</td>
-                <td>He called me to apologize for taking so long to repay me.</td>
-                <td><button class="tableButton">Delete This Mode</button></td>
-            </tr>
-        </tbody>
-    </table>
+    <p>Sample Results after clicking on View Interactions button in View Contacts page.</p>
+
+    <button type="button" class="collapsible">12/02/2019 1:26 PM (EST) - Click to Expand</button>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Mode</th>
+                    <th>Details</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Text Message</td>
+                    <td>Made plans to meet up over coffee or lunch.</td>
+                    <td><button class="tableButton">Delete</button></td>
+                </tr>
+            </tbody> 
+        </table>
+        <br>
+        <button onclick="location.href='addModeToInteraction.html'">Add Mode and Details</button>
+    </div>
+
+    <button type="button" class="collapsible">12/04/2019 5:34 PM (EST) - Click to Expand</button>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Mode</th>
+                    <th>Details</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Voice Call</td>
+                    <td>Choose a spot and time for lunch.</td>
+                    <td><button class="tableButton">Delete</button></td>
+                </tr>
+            </tbody> 
+        </table>
+        <br>
+        <button onclick="location.href='addModeToInteraction.html'">Add Mode and Details</button>
+    </div>
+
+    <button type="button" class="collapsible">12/08/2019 12:02 PM (EST) - Click to Expand</button>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Mode</th>
+                    <th>Details</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Meeting</td>
+                    <td>Met up for lunch at Queen Margherita Pizza, forgot his wallet so I covered.</td>
+                    <td><button class="tableButton">Delete</button></td>
+                </tr>
+            </tbody> 
+        </table>
+        <br>
+        <button onclick="location.href='addModeToInteraction.html'">Add Mode and Details</button>
+    </div>
+
+    <button type="button" class="collapsible">12/18/2019 7:57 PM (EST) - Click to Expand</button>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Mode</th>
+                    <th>Details</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Text Message</td>
+                    <td>Reminded him he owes me for lunch.</td>
+                    <td><button class="tableButton">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Voice Call</td>
+                    <td>He called me to apologize for taking so long to repay me.</td>
+                    <td><button class="tableButton">Delete</button></td>
+                </tr>
+            </tbody> 
+        </table>
+        <br>
+        <button onclick="location.href='addModeToInteraction.html'">Add Mode and Details</button>
+    </div>
     <br><br>
     <form method="post">
         <fieldset>
             <legend>Add an Interaction:</legend><br>
-                <input type="date" id="date">
-                <br><br>
-                <input type="time" id="time">
+                <input type="datetime-local" id="datetime">
                 <br><br>
                 <input type="submit" value="Add Interaction" class="btn" id="logSubmit">
                 <br><br>
         </fieldset><br>
     </form>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
